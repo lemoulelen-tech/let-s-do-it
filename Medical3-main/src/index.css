@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Professional Healthcare/Security Palette */
+    --background: 210 20% 98%;
+    --foreground: 215 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+
+    /* Primary: Professional Medical Blue */
+    --primary: 211 85% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 211 85% 38%;
+
+    /* Secondary: Trust Teal */
+    --secondary: 187 65% 42%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-hover: 187 65% 35%;
+
+    /* Muted: Clean Background */
+    --muted: 210 20% 96%;
+    --muted-foreground: 215 15% 45%;
+
+    /* Accent: Medical Green */
+    --accent: 165 60% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Warning/Urgency */
+    --warning: 25 95% 53%;
+    --warning-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 20% 88%;
+    --input: 214 20% 88%;
+    --ring: 211 85% 45%;
+
+    --radius: 0.5rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(211 85% 45%), hsl(187 65% 42%));
+    --gradient-hero: linear-gradient(180deg, hsl(210 20% 98%), hsl(211 85% 97%));
+    
+    /* Shadows */
+    --shadow-soft: 0 2px 8px -2px hsl(215 25% 15% / 0.08);
+    --shadow-medium: 0 4px 16px -4px hsl(215 25% 15% / 0.12);
+    --shadow-strong: 0 8px 32px -8px hsl(215 25% 15% / 0.16);
+
+    /* Transitions */
+    --transition-base: all 0.2s ease-in-out;
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 215 30% 8%;
+    --foreground: 210 20% 95%;
+
+    --card: 215 28% 12%;
+    --card-foreground: 210 20% 95%;
+
+    --popover: 215 28% 12%;
+    --popover-foreground: 210 20% 95%;
+
+    --primary: 211 85% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 211 85% 48%;
+
+    --secondary: 187 65% 48%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-hover: 187 65% 42%;
+
+    --muted: 215 25% 16%;
+    --muted-foreground: 215 15% 65%;
+
+    --accent: 165 60% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --warning: 25 95% 58%;
+    --warning-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 20% 20%;
+    --input: 215 20% 20%;
+    --ring: 211 85% 55%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(211 85% 55%), hsl(187 65% 48%));
+    --gradient-hero: linear-gradient(180deg, hsl(215 30% 8%), hsl(211 40% 12%));
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+  
+  /* Tighter spacing for conversion-focused design */
+  section {
+    @apply scroll-mt-20;
+  }
+}
